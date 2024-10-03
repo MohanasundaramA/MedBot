@@ -3,20 +3,21 @@ This project is a medical chatbot system designed to assist users with healthcar
 
 
 ## Key Features:
-* **Chatbot-Driven Medical Interaction:**
-    >The system allows users to interact with a chatbot that provides medical advice and suggests appropriate specialists based on the user’s symptoms or medical issues.
 
-* **Appointment Scheduling:**
-    >The backend integrates with the Google Calendar API to schedule appointments with doctors. Users can view available time slots and book appointments seamlessly.
+- **Chatbot-Driven Medical Interaction:** </br>
+  The system allows users to interact with a chatbot that provides medical advice and suggests appropriate specialists based on the user’s symptoms or medical issues.
 
-* **Doctor and Patient Management:**
-    >The system manages data related to doctors and patients. The database efficiently stores and retrieves this information.
+* **Appointment Scheduling:** </br>
+    The backend integrates with the Google Calendar API to schedule appointments with doctors. Users can view available time slots and book appointments seamlessly.
 
-* **User Data Processing:**
-    >The chatbot allows users to input symptoms, medical data, and other health-related information to receive personalized responses and recommendations.
+* **Doctor and Patient Management:** </br>
+    The system manages data related to doctors and patients. The database efficiently stores and retrieves this information.
 
-* **Frontend for Interactive Experience:**
-    >The frontend React app provides an intuitive interface where users can interact with the chatbot, view available doctors, fill in medical details, and book appointments.
+* **User Data Processing:** </br>
+    The chatbot allows users to input symptoms, medical data, and other health-related information to receive personalized responses and recommendations.
+
+* **Frontend for Interactive Experience:** </br>
+    The frontend React app provides an intuitive interface where users can interact with the chatbot, view available doctors, fill in medical details, and book appointments.
 
 ## Project Architecture
 
@@ -40,23 +41,23 @@ frontend/src/\
 │\
 └── App.js
 
-* `Images/`
-    >Contains all image assets used in the application. 
+* `Images/` </br>
+Contains all image assets used in the application. 
 
-* `SharedComponents/`
-    >Houses reusable components shared across various views in the application, such as loaders and animations.
+* `SharedComponents/` </br>
+    Houses reusable components shared across various views in the application, such as loaders and animations.
 
-* `Utils/`
-    >Contains utility functions for processing or transforming data used across the app.
+* `Utils/`</br>
+    Contains utility functions for processing or transforming data used across the app.
 
-* `DoctorsList/`
-    >Contains components related to displaying a list of doctors.
+* `DoctorsList/` </br>
+    Contains components related to displaying a list of doctors.
 
-* `FirstVisitCheck/`
-    >Contains components for checking if it’s the user's first visit.
+* `FirstVisitCheck/` </br>
+    Contains components for checking if it’s the user's first visit.
     
-* `MedicalDetailsForm/`
-    >Contains components for a form where users can input their medical details, potentially to get personalized recommendations.
+* `MedicalDetailsForm/` </br>
+    Contains components for a form where users can input their medical details, potentially to get personalized recommendations.
 
 
 ### Backend (Flask)
@@ -83,32 +84,32 @@ backend/\
 │\
 ├── requirements.txt          
 
-* `calendar.py`
-    >Handles integration with the Google Calendar API to manage appointments. It provides methods for authentication, retrieving existing events, and inserting new appointments into the calendar.
+* `calendar.py` </br>
+    Handles integration with the Google Calendar API to manage appointments. It provides methods for authentication, retrieving existing events, and inserting new appointments into the calendar.
 
-* `constants.py`
-    >Initializes the embedding model and the LLM model.
+* `constants.py` </br>
+   Initializes the embedding model and the LLM model.
 
-* `vectorStore.py`
-    >Handles the extraction of data from documents and stores it in a vector database (Faiss).
+* `vectorStore.py` </br>
+    Handles the extraction of data from documents and stores it in a vector database (Faiss).
 
-* `medgpt.py`
-    >Responsible for generating medical advice and treatment plans using an LLM model with Retrieval-Augmented Generation (RAG) to fetch necessary context.
+* `medgpt.py` </br>
+    Responsible for generating medical advice and treatment plans using an LLM model with Retrieval-Augmented Generation (RAG) to fetch necessary context.
 
-* `database.py`
-    >Initializes and manages the SQLAlchemy object for database interactions.
+* `database.py` </br>
+    Initializes and manages the SQLAlchemy object for database interactions.
 
-* `insertDataToDB.py`
-    >Populates the database with initial data for doctors and patients when setting up the system.
+* `insertDataToDB.py` </br>
+    Populates the database with initial data for doctors and patients when setting up the system.
 
-* `main.py`
-    >Defines the Flask server, sets up CORS, and provides API endpoints for interacting with patients and doctors.
+* `main.py` </br>
+    Defines the Flask server, sets up CORS, and provides API endpoints for interacting with patients and doctors.
 
-* `models.py` 
-    >Defines the database models for Doctors and Patients.
+* `models.py` </br>
+    Defines the database models for Doctors and Patients.
 
-* `utils.py`
-    >Provides utility functions for tasks related to appointment booking, finding specialists, and interacting with the calendar.
+* `utils.py` </br>
+    Provides utility functions for tasks related to appointment booking, finding specialists, and interacting with the calendar.
 
 
 ## Prerequisites:
