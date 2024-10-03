@@ -70,7 +70,7 @@ def handle_event_creation(service, target_date, time, patient_name, phone_number
 def create_new_patient(patient_data):
     # Generate a unique user ID by counting existing patients and appending it to the patient's name
     user_count = Patient.query.count() + 1
-    user_name = re.sub(r'\s+', '_', patient_data.get('name', '').lower())
+    user_name = re.sub(r'\s+', '_', patient_data.get('patientName', '').lower())
     user_id = f"{user_name}_{user_count:02d}"
 
     # Create a new patient object
