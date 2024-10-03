@@ -8,7 +8,7 @@ This project is a medical chatbot system designed to assist users with healthcar
   The system allows users to interact with a chatbot that provides medical advice and suggests appropriate specialists based on the user’s symptoms or medical issues.
 
 * **Appointment Scheduling:** </br>
-    The backend integrates with the Google Calendar API to schedule appointments with doctors. Users can view available time slots and book appointments seamlessly.
+    The backend integrates with the Google Calendar API to schedule appointments with doctors. Users can view available time slots and book appointments seamlessly. Once an appointment is booked, the data is stored in the database for the doctor’s reference.
 
 * **Doctor and Patient Management:** </br>
     The system manages data related to doctors and patients. The database efficiently stores and retrieves this information.
@@ -127,17 +127,41 @@ cd medical-chatbot
 ```
 Step 2: Backend 
 ```
+# download libraries
 pip install -r requirements.txt
 
+# run vectorstore to generate and store embeddings
 python vectorstore.py
 
+# run the backend
 flask run
 ```
 Step 3: Frontend 
 ```
+# download node modules
 npm install
+
+# start the app
 npm start
 ```
+
+## User Workflow:
+
+1. **User Initiates Chat:**
+The user can input their medical concerns into the chatbot. The chatbot, powered by LLM, responds with disorder name based on the provided symptoms, suggesting possible specializations.
+
+2. **Get Treatment Recommendations:**
+The user can input their medical data and get treatment recommendations from the chatbot.
+
+3. **Doctor Selection:**
+The user can view a list of available doctors based on the specialization suggested by the chatbot.
+
+4. **Book Appointment:**
+    - After identifying the appropriate specialist, The user can book an appointment directly through the chat interface. 
+    - The system retrieves available slots by interacting with Google Calendar and allows the user to confirm a time.
+    - After successful booking, the system stores the user's data securely in the database. The chatbot uses this information to offer personalized recommendations for future interactions.
+
+https://github.com/user-attachments/assets/44e52262-dff0-46aa-8a01-be74478c5478
 
 ## Conclusion:
 This Medical Chatbot Application offers a user-friendly solution to help patients navigate healthcare services. With the integration of AI-based medical suggestions, appointment scheduling via Google Calendar, and seamless doctor-patient interaction management, it simplifies the process of accessing healthcare. The chatbot’s ability to personalize responses based on user data ensures that users receive relevant and actionable advice, enhancing the overall user experience.
